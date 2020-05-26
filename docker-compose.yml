@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  minecraft:
+    image: repo.zsombor.net/freshpmmp
+    restart: always
+    environment:
+      - "POCKETMINE_PLUGINS=PureEntitiesX MSpawns"
+    ports:
+      - 19132:19132/tcp
+      - 19132:19132/udp
+    volumes:
+      - mc-data:/data
+
+volumes:
+  mc-data:
